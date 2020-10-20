@@ -1,0 +1,22 @@
+RewriteEngine On
+RewriteRule ^home$ index.php?p=home
+RewriteRule ^panier$ index.php?p=panier
+RewriteRule ^pro$ index.php?p=pro
+RewriteRule ^cart-([0-9]+)$ index.php?p=cart&id=$1
+RewriteRule ^inscription$ index.php?p=inscription
+RewriteRule ^inscriptions$ log/inscription.php
+RewriteRule ^connexion$ index.php?p=connexion
+RewriteRule ^uploads$ index.php?p=uploads
+RewriteRule ^notifications$ index.php?p=notifications
+RewriteRule ^parametres$ index.php?p=parametres
+RewriteRule ^affil$ index.php?p=affil
+RewriteRule ^payement$ index.php?p=payement
+RewriteRule ^addpayement$ index.php?p=addpayement
+RewriteRule ^([a-z-0-9]+)$ index.php?p=dashboard_user
+RewriteRule ^([a-z-0-9]+)_tr$ index.php?p=pro&q=tr&id=$1
+RewriteRule ^dashboard_admin$ index.php?p=dashboard
+RewriteRule  ^admin_email$ index.php?p=dashboard&q=email
+RewriteRule  ^admin_clients$ index.php?p=dashboard&q=clients
+RewriteRule  ^admin_visites$ index.php?p=dashboard&q=visites
+RewriteRule  ^admin_abonnes$ index.php?p=dashboard&q=abonnes
+RewriteRule  ^admin_contacts$ index.php?p=dashboard&q=contacts
