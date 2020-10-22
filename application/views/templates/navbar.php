@@ -52,7 +52,11 @@
               </li>
               <li class="nav-item" id="panier">
                   <a class="nav-link text-muted" href="<?php echo site_url('loginController/index');?>">
-                    <small>Mon compte</small>
+                    <small>
+                      <?php 
+                        (isset($_SESSION['username'])? printf('Mon compte'): printf('Se connecter'));
+                      ?>
+                    </small>
                   </a>
               </li>
             </ul>

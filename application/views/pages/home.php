@@ -1,7 +1,7 @@
-
 <head>
 
 </head>
+
 <body>
 	<br><br><br><br>
 	<header>
@@ -38,12 +38,12 @@
 						</div>
 					</div>
 				</div>
-			</div>	
-		  <svg viewBox="0 0 1440 319">
-	        <path fill="#f8f9fa" fill-opacity="1" d="M0,32L48,80C96,128,192,224,288,224C384,224,480,128,576,90.7C672,53,768,75,864,96C960,117,1056,139,1152,149.3C1248,160,1344,160,1392,160L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
-	      </svg>
+			</div>
+			<svg viewBox="0 0 1440 319">
+				<path fill="#f8f9fa" fill-opacity="1" d="M0,32L48,80C96,128,192,224,288,224C384,224,480,128,576,90.7C672,53,768,75,864,96C960,117,1056,139,1152,149.3C1248,160,1344,160,1392,160L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+			</svg>
 		</div>
-	
+
 		<div class="w-100 bg-light p-3" id="wersind" style="">
 			<br>
 			<h2 class="text-center">
@@ -63,7 +63,7 @@
 				</div>
 			</div>
 		</div>
-		
+
 
 		<div class="w-100 p-6" style="margin-bottom: 5%" id="services">
 			<div class="container">
@@ -74,8 +74,8 @@
 				<div class="row">
 					<div class="col-lg-4 card12">
 						<div class="card shad p-3" style="height: 98%;margin-top: 5%;text-align: center">
-							<div class="card-title"  style="padding: 5%">
-								 <h4>ABI est benefique</h4>
+							<div class="card-title" style="padding: 5%">
+								<h4>ABI est benefique</h4>
 							</div>
 							<div class="w-100 r-p text-center" id="card1">
 								<img src="svg/check.svg" width="100" style="color:white">
@@ -87,8 +87,8 @@
 					</div>
 					<div class="col-lg-4 card12">
 						<div class="card shad p-3" style="height: 98%;margin-top: 5%;text-align: center">
-							<div class="card-title"  style="padding: 5%">
-								 <h4>ABI est sécurisé</h4>
+							<div class="card-title" style="padding: 5%">
+								<h4>ABI est sécurisé</h4>
 							</div>
 							<div class="w-100 r-p text-center" id="card1">
 								<img src="svg/lock.svg" width="100">
@@ -100,8 +100,8 @@
 					</div>
 					<div class="col-lg-4 card12">
 						<div class="card shad p-3" style="height: 98%;margin-top: 5%;text-align: center">
-							<div class="card-title"  style="padding: 5%">
-								 <h4>ABI est fiable</h4>
+							<div class="card-title" style="padding: 5%">
+								<h4>ABI est fiable</h4>
 							</div>
 							<div class="w-100 r-p text-center" id="card1">
 								<img src="svg/handshake.svg" width="100">
@@ -123,172 +123,172 @@
 			<div class="container">
 				<div class="row" style="">
 					<div class="col-lg-4 div-prices" style="margin-bottom: 13%;">
-	   					<div class="card shad r-p">
-	   						<div class="card-title  text-center">
-	   							<img src="img/money.png" width="240" class="im-card-top">
-	   						</div>
-	   						<div class="card-body">
-	   							<h2>
-	   								<b>
-	   									10$
-	   								</b>
-	   							</h2>
-			   					<ul class="list-unstyled mt-3 mb-4 text-dark">
-				                  <table>
-				                    <tr>
-				                      <td>
-				                        <img src="svg/check.svg" width="20">
-				                      </td>
-				                      <td>
-				                          <li>Gagner 10$ chaque mois  </li>
-				                      </td>
-				                    </tr>
-				                    <tr>
-				                      <td>
-				                        <img src="svg/check.svg" width="20">
-				                      </td>
-				                      <td>
-				                           <li>Notifications avant chaque paiement </li>
-				                      </td>
-				                    </tr>
-				                    <tr>
-				                      <td>
-				                        <img src="svg/check.svg" width="20">
-				                      </td>
-				                      <td>
-				                           <li>inscription Gratuite</li>
-				                      </td>
-				                    </tr>
-				                    <tr>
-				                      <td>
-				                        <img src="svg/check.svg" width="20">
-				                      </td>
-				                      <td>
-				                           <li>support email </li>
-				                      </td>
-				                    </tr>
-				                  </table>
-				                </ul>
+						<div class="card shad r-p">
+							<div class="card-title  text-center">
+								<img src="img/money.png" width="240" class="im-card-top">
+							</div>
+							<div class="card-body">
+								<h2>
+									<b>
+										10$
+									</b>
+								</h2>
+								<ul class="list-unstyled mt-3 mb-4 text-dark">
+									<table>
+										<tr>
+											<td>
+												<img src="svg/check.svg" width="20">
+											</td>
+											<td>
+												<li>Gagner 10$ chaque mois </li>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<img src="svg/check.svg" width="20">
+											</td>
+											<td>
+												<li>Notifications avant chaque paiement </li>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<img src="svg/check.svg" width="20">
+											</td>
+											<td>
+												<li>inscription Gratuite</li>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<img src="svg/check.svg" width="20">
+											</td>
+											<td>
+												<li>support email </li>
+											</td>
+										</tr>
+									</table>
+								</ul>
 								<a href="function/addpanier.php?id=1">
-				    				<button class="btn btn-success w-100 r-p ">
-				    					Souscrire au pack
-				    				</button>
-				    			</a>
-	   						</div>
-	   					</div>
-	   				</div>
+									<button class="btn btn-success w-100 r-p ">
+										Souscrire au pack
+									</button>
+								</a>
+							</div>
+						</div>
+					</div>
 
-	   				<div class="col-lg-4 div-prices" style="margin-bottom: 14%;">
-	   					<div class="card shad r-p">
-	   						<div class="card-title  text-center">
-	   							<img src="img/money.png" width="240" class="im-card-top">
-	   						</div>
-	   						<div class="card-body">
-	   							<h2>
-	   								<b>
-	   									50$
-	   								</b>
-	   							</h2>
-			   					<ul class="list-unstyled mt-3 mb-4 text-dark">
-				                  <table>
-				                    <tr>
-				                      <td>
-				                        <img src="svg/check.svg" width="20">
-				                      </td>
-				                      <td>
-				                          <li>Gagner 50$ chaque mois  </li>
-				                      </td>
-				                    </tr>
-				                    <tr>
-				                      <td>
-				                        <img src="svg/check.svg" width="20">
-				                      </td>
-				                      <td>
-				                           <li>Notifications avant chaque paiement </li>
-				                      </td>
-				                    </tr>
-				                    <tr>
-				                      <td>
-				                        <img src="svg/check.svg" width="20">
-				                      </td>
-				                      <td>
-				                           <li>inscription Gratuite</li>
-				                      </td>
-				                    </tr>
-				                    <tr>
-				                      <td>
-				                        <img src="svg/check.svg" width="20">
-				                      </td>
-				                      <td>
-				                           <li>support email et téléphone </li>
-				                      </td>
-				                    </tr>
-				                  </table>
-				                </ul>
-				                 <a href="function/addpanier.php?id=2">
-				    				<button class="btn btn-success w-100 r-p ">
-				    					Souscrire au pack
-				    				</button>
-				    				</a>
-	   						</div>
-	   					</div>
-	   				</div>
+					<div class="col-lg-4 div-prices" style="margin-bottom: 14%;">
+						<div class="card shad r-p">
+							<div class="card-title  text-center">
+								<img src="img/money.png" width="240" class="im-card-top">
+							</div>
+							<div class="card-body">
+								<h2>
+									<b>
+										50$
+									</b>
+								</h2>
+								<ul class="list-unstyled mt-3 mb-4 text-dark">
+									<table>
+										<tr>
+											<td>
+												<img src="svg/check.svg" width="20">
+											</td>
+											<td>
+												<li>Gagner 50$ chaque mois </li>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<img src="svg/check.svg" width="20">
+											</td>
+											<td>
+												<li>Notifications avant chaque paiement </li>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<img src="svg/check.svg" width="20">
+											</td>
+											<td>
+												<li>inscription Gratuite</li>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<img src="svg/check.svg" width="20">
+											</td>
+											<td>
+												<li>support email et téléphone </li>
+											</td>
+										</tr>
+									</table>
+								</ul>
+								<a href="function/addpanier.php?id=2">
+									<button class="btn btn-success w-100 r-p ">
+										Souscrire au pack
+									</button>
+								</a>
+							</div>
+						</div>
+					</div>
 
-	   				<div class="col-lg-4 div-prices" style="margin-bottom: 13%;">
-	   					<div class="card shad r-p">
-	   						<div class="card-title  text-center">
-	   							<img src="img/money.png" width="240" class="im-card-top">
-	   						</div>
-	   						<div class="card-body">
-	   							<h2>
-	   								<b>
-	   									100$
-	   								</b>
-	   							</h2>
-			   					<ul class="list-unstyled mt-3 mb-4 text-dark">
-				                  <table>
-				                    <tr>
-				                      <td>
-				                        <img src="svg/check.svg" width="20">
-				                      </td>
-				                      <td>
-				                          <li>Gagner 100$ chaque mois </li>
-				                      </td>
-				                    </tr>
-				                    <tr>
-				                      <td>
-				                        <img src="svg/check.svg" width="20">
-				                      </td>
-				                      <td>
-				                           <li>Notifications avant chaque paiement </li>
-				                      </td>
-				                    </tr>
-				                    <tr>
-				                      <td>
-				                        <img src="svg/check.svg" width="20">
-				                      </td>
-				                      <td>
-				                           <li>inscription Gratuite</li>
-				                      </td>
-				                    </tr>
-				                    <tr>
-				                      <td>
-				                        <img src="svg/check.svg" width="20">
-				                      </td>
-				                      <td>
-				                           <li>support email et téléphone </li>
-				                      </td>
-				                    </tr>
-				                  </table>
-				                </ul>
-				                 <a href="function/addpanier.php?id=3">
-				    				<button class="btn btn-success w-100 r-p shad ">
-				    					Souscrire au pack
-				    				</button>
-				    			</a>
-	   						</div>
-	   					</div>
-	   				</div>
+					<div class="col-lg-4 div-prices" style="margin-bottom: 13%;">
+						<div class="card shad r-p">
+							<div class="card-title  text-center">
+								<img src="img/money.png" width="240" class="im-card-top">
+							</div>
+							<div class="card-body">
+								<h2>
+									<b>
+										100$
+									</b>
+								</h2>
+								<ul class="list-unstyled mt-3 mb-4 text-dark">
+									<table>
+										<tr>
+											<td>
+												<img src="svg/check.svg" width="20">
+											</td>
+											<td>
+												<li>Gagner 100$ chaque mois </li>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<img src="svg/check.svg" width="20">
+											</td>
+											<td>
+												<li>Notifications avant chaque paiement </li>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<img src="svg/check.svg" width="20">
+											</td>
+											<td>
+												<li>inscription Gratuite</li>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<img src="svg/check.svg" width="20">
+											</td>
+											<td>
+												<li>support email et téléphone </li>
+											</td>
+										</tr>
+									</table>
+								</ul>
+								<a href="function/addpanier.php?id=3">
+									<button class="btn btn-success w-100 r-p shad ">
+										Souscrire au pack
+									</button>
+								</a>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -309,28 +309,23 @@
 							</div>
 							<div class="col-lg-6">
 								<div class="container text-center w-100">
-									<form action="http://localhost/africanBusiness/index.php/investisseur/ajout" method="POST">
-										<input type="text" name="nom" placeholder="name..." class="btn btn-light"
-										style="cursor: text;text-align: left;">
+									<form action="http://localhost/africanBusiness/index.php/investisseur/ajout_post" method="POST">
+										<input type="text" name="nom" placeholder="name..." class="btn btn-light" style="cursor: text;text-align: left;">
 
 										<br><br>
 
-										<input type="text" name="pays" placeholder="votre pays..." class="btn btn-light"
-										style="cursor: text;text-align: left;">										
+										<input type="text" name="pays" placeholder="votre pays..." class="btn btn-light" style="cursor: text;text-align: left;">
 										<br><br>
 
-										<input type="tel" name="tel" placeholder="contact..." class="btn btn-light"
-										style="cursor: text;text-align: left;">
+										<input type="tel" name="tel" placeholder="contact..." class="btn btn-light" style="cursor: text;text-align: left;">
 										<br><br>
 
-										<input type="email" name="mail" placeholder="email..." class="btn btn-light"
-										style="cursor: text;text-align: left;">
+										<input type="email" name="mail" placeholder="email..." class="btn btn-light" style="cursor: text;text-align: left;">
 										<br><br>
 
-										<input type="password" name="mdp" placeholder="votre mot de passe..." class="btn btn-light"
-										style="cursor: text;text-align: left;">
+										<input type="password" name="mdp" placeholder="votre mot de passe..." class="btn btn-light" style="cursor: text;text-align: left;">
 										<br><br>
-										<input type="submit" name=""  class="btn btn-primary" style="background: #000;border:2px solid #000; " value="Nous Rejoindre !">
+										<input type="submit" name="" class="btn btn-primary" style="background: #000;border:2px solid #000; " value="Nous Rejoindre !">
 									</form>
 									<br>
 									<small>
@@ -348,18 +343,18 @@
 	</header>
 
 	<footer class="bg-dark text-white" id="contact">
-	  <div class="row p-3 ">
-	  	<div class="col-sm-4" style="padding: 2%">
-		  <div  style="float: left;">
-			  <img src="img/logo.png" style="width:30%;margin-top: 6px; margin-right:2%; float:left">
-		  		<h1 style="margin-bottom: -3px;margin-top: -9px; "><a href="#" style="font-family: Trebuchet MS"> ABI</a></h1>
-				<small><a href="">African Business International</a></small><br>
-				<ul class="list-unstyled">
-					<li><small><a class="text-muted" href="#">59000 Lille, France</a></small></li>
-				</ul>
-		  </div>
-		</div>
-      <!--div class="col-lg-3 ">
+		<div class="row p-3 ">
+			<div class="col-sm-4" style="padding: 2%">
+				<div style="float: left;">
+					<img src="img/logo.png" style="width:30%;margin-top: 6px; margin-right:2%; float:left">
+					<h1 style="margin-bottom: -3px;margin-top: -9px; "><a href="#" style="font-family: Trebuchet MS"> ABI</a></h1>
+					<small><a href="">African Business International</a></small><br>
+					<ul class="list-unstyled">
+						<li><small><a class="text-muted" href="#">59000 Lille, France</a></small></li>
+					</ul>
+				</div>
+			</div>
+			<!--div class="col-lg-3 ">
        <h3 class="text-white">
          ABI
        </h3>
@@ -367,16 +362,16 @@
          ABi est une plateforme d'investissement dans laquelle vous investiser sur des startups prométeusse et entant que actionnaire vous gagnerai une part des profils réalisées par ces startups
         </small>
       </div-->
-	  <div class="col-sm-3" style="padding: 2%">
-		<h5 style="color: #fff;">Liens utiles</h5>
-			<ul class="list-unstyled text-small">
-			<li><a class="text-muted" href="inscription">Inscription</a></li>
-			<li><a class="text-muted" href="connexion">connexion</a></li>
-			<li><a class="text-muted" href="home#tarifs">Packs</a></li>
-			<li><a class="text-muted" href="home#services">Services</a></li>
-			</ul>
-		</div>
-      <!--div class="col-lg-3 ">
+			<div class="col-sm-3" style="padding: 2%">
+				<h5 style="color: #fff;">Liens utiles</h5>
+				<ul class="list-unstyled text-small">
+					<li><a class="text-muted" href="inscription">Inscription</a></li>
+					<li><a class="text-muted" href="connexion">connexion</a></li>
+					<li><a class="text-muted" href="home#tarifs">Packs</a></li>
+					<li><a class="text-muted" href="home#services">Services</a></li>
+				</ul>
+			</div>
+			<!--div class="col-lg-3 ">
         <br><br>
         <h5 style="color: #fff;">Liens utiles</h5>
         <ul class="list-unstyled text-small">
@@ -385,15 +380,15 @@
           <li><a class="text-muted" href="home#tarifs">Tarifs</a></li>
         </ul>
       </div-->
-		<div class="col-sm-3" style="padding: 2%">
-			<h5 style="color: #fff;">contact</h5>
-			<ul class="list-unstyled text-small">
-				<li><a class="text-muted" href="#">Tél : 06 95 52 62 89</a></li>
-				<li><a class="text-muted" href="#">Notre compte facebook</a></li>
-				<li><a class="text-muted" href="mailto:africanbusinessinternational1@gmail.com">africanbusinessinternational1@gmail.com</a></li>
-			</ul>
-		</div>
-      <!--div class="col-lg-3 ">
+			<div class="col-sm-3" style="padding: 2%">
+				<h5 style="color: #fff;">contact</h5>
+				<ul class="list-unstyled text-small">
+					<li><a class="text-muted" href="#">Tél : 06 95 52 62 89</a></li>
+					<li><a class="text-muted" href="#">Notre compte facebook</a></li>
+					<li><a class="text-muted" href="mailto:africanbusinessinternational1@gmail.com">africanbusinessinternational1@gmail.com</a></li>
+				</ul>
+			</div>
+			<!--div class="col-lg-3 ">
         <br><br>
         <h5 style="color: #fff;">contact</h5>
         <ul class="list-unstyled text-small">
@@ -403,53 +398,64 @@
           
         </ul>
       </div-->
-    </div>
+		</div>
 	</footer>
 
 </body>
 <style type="text/css">
-	#pbtn{
-		background:#727cf5;
-		border:2px solid #727cf5;
+	#pbtn {
+		background: #727cf5;
+		border: 2px solid #727cf5;
 	}
-	#carde{
+
+	#carde {
 		width: 700px;
 	}
-	.text-gold{
+
+	.text-gold {
 		color: #DBAE00;
 	}
-	#circle{
+
+	#circle {
 		width: 70px;
 		height: 70px;
 	}
-	#moveup{
-		position: relative;top: -120px;
+
+	#moveup {
+		position: relative;
+		top: -120px;
 		left: 40px;
 	}
-	#card1{
+
+	#card1 {
 		background-image: url(img/cover.svg);
 	}
+
 	/*.input-field input[type="text"]{
 		border-bottom: 2px solid #727cf5;
 	}*/
-	@media(max-width: 770px){
-		#banniere1{
+	@media(max-width: 770px) {
+		#banniere1 {
 			display: none;
 		}
-		#meinung{
-			position: relative;top: -110px;
+
+		#meinung {
+			position: relative;
+			top: -110px;
 		}
-		.div-prices{
+
+		.div-prices {
 			height: 530px;
 		}
-		.card12{
+
+		.card12 {
 			height: 450px;
 		}
-		
+
 	}
-	
-	@media(max-width: 400px){
-		.div-prices{
+
+	@media(max-width: 400px) {
+		.div-prices {
 			height: 530px;
 		}
 	}
