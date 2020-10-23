@@ -13,7 +13,7 @@
 						</div>
 						<div class="col-lg-6">
 							<div class="container text-center">
-								<form style="margin-top: 15%" action="http://localhost/africanBusiness/index.php/investisseur/login_post" method="POST">
+								<form style="margin-top: 15%" action="http://localhost/investissement/index.php/investisseur/login" method="POST">
 									<input type="email" name="mail" placeholder="your email." class="btn btn-light" style="cursor: text;text-align: left;">
 
 									<br><br>

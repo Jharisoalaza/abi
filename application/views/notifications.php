@@ -36,7 +36,7 @@
 								Hello
 							</span>,
 							<span>
-								Marco carlos
+								<?php echo $_SESSION['user']; ?> !!!
 							</span>
 						</h1>
 						<h3>

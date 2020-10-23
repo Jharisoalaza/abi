@@ -22,8 +22,14 @@ class Representant extends REST_Controller
         // Load these helper to create JWT tokens
         $this->load->helper(['jwt', 'authorization']);
         $this->load->model('Representant_Model', 'representant');
+
+        
     }
 
+    public function getCriptedCode($code)
+    {
+        return $this->cryptThings($code);
+    }
     public function liste_get(){
         $data = $this->representant->listeRepresentant();
         $this->response($data, REST_Controller::HTTP_OK);
@@ -31,15 +37,15 @@ class Representant extends REST_Controller
     }
 
     public function ajoutRepresentant_post(){
-        /*$json = file_get_contents('php://input');
-        $data = json_decode($json);*/
+        $json = file_get_contents('php://input');
+        $data = json_decode($json);
         $data->nomRepresentant= json_encode($_POST['nom']);
         $data->paysRepresentant= $_POST['pays'];
         $data->telRepresentant= $_POST['tel'];
         $data->mailRepresentant= $_POST['mail'];
         $data->mdpRepresentant= $_POST['mdp'];
         $data->idR = null;
-        $idInvest= cryptThings( $_POST['mdp']);
+        $idInvest = $this->cryptThings( $_POST['mdp']);
         $data->codeRepresentant = $idInvest;
         
         if($this->representant->addRepresentant($data)){
@@ -137,5 +143,7 @@ class Representant extends REST_Controller
         $response = md5(sha1(sha1(sha1(md5($password)))));
         return $response;
     }
+
+    
 }
 ?>

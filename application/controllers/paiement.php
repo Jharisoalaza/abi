@@ -18,7 +18,7 @@ class Paiement extends REST_Controller
             exit();
         }
         parent::__construct();
-        $this->load->library('encrypt');
+        $this->load->library('encryption');
         // Load these helper to create JWT tokens
         $this->load->helper(['jwt', 'authorization']);
         $this->load->model('Pack_Model', 'pack');

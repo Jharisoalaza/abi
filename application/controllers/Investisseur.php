@@ -18,7 +18,7 @@ class Investisseur extends REST_Controller
             exit();
         }
         parent::__construct();
-        $this->load->library('encrypt');
+        $this->load->library('encryption');
         // Load these helper to create JWT tokens
         $this->load->helper(['jwt', 'authorization']);
        $this->load->model('InvestisseurModel', 'representant');
@@ -95,14 +95,17 @@ class Investisseur extends REST_Controller
         $password= $_POST['mdp'];
         //$password = $data->mdp;
        $this->load->model('InvestisseurModel', 'representant');
-        
-        $result = $this->representant->loginI($login);
+       $result = $this->representant->loginI($login);
+        $data = array(
+            'isLogin' => 'Loged',
+            'user' => $result->nomInvestisseur
+        );
         if (!empty($result)) {
             if($password == $result->mdpInvestisseur){
                 //$this->response($result, REST_Controller::HTTP_OK);
                // $this->load->view('dashboard_user');
                 header("location:"."index");
-
+                $this->session->set_userdata($data);
             }
             else{
                // $this->response($password, REST_Controller::HTTP_OK);
@@ -112,6 +115,14 @@ class Investisseur extends REST_Controller
         } else {
             $this->response(['msg' => 'e-mail introuvable']);
         }
+    }
+
+    public function logout_get(){
+        unset($_SESSION['isLogin']);
+
+        session_destroy();
+        header("location:" . "/investissement");
+
     }
 
     public function  getInvestisseur_post($codeRepresentant){

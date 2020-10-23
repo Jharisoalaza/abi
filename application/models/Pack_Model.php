@@ -28,6 +28,5 @@ class Pack_Model extends CI_Model
     return $this->db->delete( 'pack', ['tarif'=> $prix]);
     $this->db->close();
   }
-
 }
 ?>

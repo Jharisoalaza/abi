@@ -99,16 +99,16 @@
 							<div class="col-lg-2">
 								<br>
 								<?php
-									if (isset($_SESSION["id"])) {
+									if (isset($_SESSION["isLogin"])) {
 										?>
-											<a href="cart-<?=$key?>">
-											<button type="button" class="btn btn-lg btn-block btn-primary btn btn-primary btn-wide transition-3d-hover">continuer </button>
+										<a href="<?php echo site_url('paiement/payer'); ?>">
+											<button type="button" class="btn btn-lg btn-block btn-primary btn btn-primary btn-wide transition-3d-hover">Continuer </button>
 										</a>
 										<?php
 									}else{
 										?>
-											<a href="connexion">
-											<button type="button" class="btn btn-lg btn-block btn-primary btn btn-primary btn-wide transition-3d-hover">se connecter </button>
+											<a href="<?php echo site_url('LoginController') ?>">
+											<button type="button" class="btn btn-lg btn-block btn-primary btn btn-primary btn-wide transition-3d-hover">Se connecter </button>
 										</a>
 										<?php
 									}

@@ -8,7 +8,7 @@
     }
 
     function images_url($image){
-        return base_url().'assets/img/'.$image;
+        return base_url().'assets/img/'.$image ;
     }
 
     function font_url(){
