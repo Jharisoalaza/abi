@@ -66,7 +66,7 @@
 	      </svg>
 		</div>
 	
-		<div class="w-100 bg-light p-3" id="wersind" style="">
+		<div class="w-100 bg-light p-3" id="wersind" >
 			<br>
 			<h2 class="text-center">
 				ABI?
@@ -143,7 +143,7 @@
 			</h2>
 			<br><br>
 			<div class="container">
-				<div class="row" style="">
+				<div class="row" >
 					<div class="col-lg-4 div-prices" style="margin-bottom: 13%;">
 	   					<div class="card shad r-p">
 	   						<div class="card-title  text-center">
