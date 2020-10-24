@@ -70,5 +70,11 @@ class InvestisseurModel extends CI_Model
     $query = $this->db->query('SELECT * from investisseur where codeParrain ="'.$code.'"');
     return $query->num_rows();
   }
+
+  public function commissionGaigner()
+  {
+  }
+
+
 }
 ?>

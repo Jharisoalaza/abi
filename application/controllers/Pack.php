@@ -1,9 +1,10 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
-require APPPATH . 'third_party/REST_Controller.php';
-require APPPATH . 'third_party/Format.php';
+require_once APPPATH . 'third_party/REST_Controller.php';
+require_once APPPATH . 'third_party/Format.php';
 
 use Restserver\Libraries\REST_Controller;
+
 
 header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Methods: GET, POST, OPTIONS, PUT, DELETE");
@@ -18,7 +19,7 @@ class Pack extends REST_Controller
             exit();
         }
         parent::__construct();
-        $this->load->library('encrypt');
+        $this->load->library('encryption');
         // Load these helper to create JWT tokens
         $this->load->helper(['jwt', 'authorization']);
         $this->load->model('Pack_Model', 'pack');
@@ -64,8 +65,61 @@ class Pack extends REST_Controller
         return $id;
     }
 
-    /**
-     * 
+
+    //     Code generator
+    public function getGenCode_get($price)
+    {
+        print_r($this->generateCode($price));
+    }
+
+    private function generateCode($price)
+    {
+        $n = 8;
+        $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        $randomString = '';
+
+        for ($i = 0; $i < $n; $i++) {
+            $index = rand(0, strlen($characters) - 1);
+            if ($i === 5) {
+                switch ($price) {
+                    case '10':
+                        $randomString .= '-XA@-';
+                        break;
+                    case '50':
+                        $randomString .= '-GK@-';
+                        break;
+                    case '100':
+                        $randomString .= '-YB@-';
+                        break;
+                }
+                // sdf54-1A@-SDF
+            }
+            $randomString .= $characters[$index];
+        }
+
+        $code = $randomString;
+
+        return $code;
+    }
+
+    
+
+    public function genListe_get($price)
+    {
+        for ($i = 0; $i < 100; $i++) {
+            # code...
+            $code = $this->generateCode($price);
+            $data = array(
+                'refPack' => $code,
+                'tarif' => $price,
+                'etat' => '0'
+            );
+            $this->pack->createList($data);
+        }
+        return printf('vita');
+    }
+
+    /* * 
      * 
      * private function cryptThings($password)
      *{

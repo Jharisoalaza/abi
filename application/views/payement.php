@@ -24,6 +24,19 @@
 <body>
     <?php
     require 'templates/navbar.php';
+
+    function getPriceByKey($key)
+    {
+        if ($key == 1) {
+            return "10€";
+        } elseif ($key == 2) {
+            return "50€";
+        } elseif ($key == 3) {
+            return "100€";
+        } else {
+            return 'effectue';
+        }
+    }
     ?>
     <header>
         <div class="w-100" id="banniere">
@@ -96,13 +109,7 @@
                                                     <h1 style="color: #fff;">
                                                         pack
                                                         <?php
-                                                        if ($key == 1) {
-                                                            echo "10€";
-                                                        } elseif ($key == 2) {
-                                                            echo "50€";
-                                                        } elseif ($key == 3) {
-                                                            echo "100€";
-                                                        }
+                                                            echo getPriceByKey($key);
                                                         ?>
                                                     </h1>
                                                 </center>
@@ -113,26 +120,16 @@
                                             <h3 style="text-transform: lowercase;">
                                                 Pack de
                                                 <?php
-                                                if ($key == 1) {
-                                                    echo "10€";
-                                                } elseif ($key == 2) {
-                                                    echo "50€";
-                                                } elseif ($key == 3) {
-                                                    echo "100€";
-                                                }
+                                                    echo getPriceByKey($key);
+
                                                 ?>
 
                                             </h3>
                                             <span>
                                                 ce pack vous permettra de gagner jusqu'a
                                                 <?php
-                                                if ($key == 1) {
-                                                    echo "10€";
-                                                } elseif ($key == 2) {
-                                                    echo "50€";
-                                                } elseif ($key == 3) {
-                                                    echo "100€";
-                                                }
+                                                    echo getPriceByKey($key);
+
                                                 ?>
                                                 par mois
                                             </span>
@@ -149,7 +146,7 @@
                                             <?php
                                             } else {
                                             ?>
-                                                <a href="<?php echo site_url('paiement/payer'); ?>">
+                                                <a href="<?php echo site_url('paiement/payer/' .$key); ?>">
                                                     <button type="button" class="btn btn-lg btn-block btn-primary btn btn-primary btn-wide transition-3d-hover">Payer</button>
                                                 </a>
                                             <?php

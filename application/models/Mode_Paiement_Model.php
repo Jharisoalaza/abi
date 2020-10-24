@@ -29,3 +29,4 @@ class Mode_Paiement_Model extends CI_Model
   }
 }
 ?>
+

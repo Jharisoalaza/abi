@@ -21,64 +21,70 @@ class Investisseur extends REST_Controller
         $this->load->library('encryption');
         // Load these helper to create JWT tokens
         $this->load->helper(['jwt', 'authorization']);
-       $this->load->model('InvestisseurModel', 'representant');
+        $this->load->model('InvestisseurModel', 'representant');
     }
 
-    public function index_get(){
+    public function index_get()
+    {
         $json = file_get_contents('php://input');
         $id = 'VE1UNVS2';
         $result['affil'] = $this->representant->totalAffilie($id);
-         // $this->response($res);
+        // $this->response($res);
         $this->load->view('dashboard_user', $result);
     }
 
-    public function liste_get(){
+    public function liste_get()
+    {
         $data = $this->representant->listeI();
         $this->response($data, REST_Controller::HTTP_OK);
         //this->load->view('representant',$data);
     }
 
-    public function ajout_post(){
-        $json = file_get_contents('php://input');
-       // $data = json_decode($json);
+    public function ajout_post()
+    {
+        # $json = file_get_contents('php://input');
+        // $data = json_decode($json);
         //$login = $data->mail;
-        $mdp= $_POST['mdp'];
-        $val= $this->crypter($mdp);
-        $idR= $val;
-        $nom= $_POST['nom'];
-        $mail= $_POST['mail'];
-        $tel= $_POST['tel'];
+        $mdp = $_POST['mdp'];
+        $val = $this->crypter($mdp);
+        $idR = $val;
+        $nom = $_POST['nom'];
+        $email = $_POST['mail'];
+        $tel = $_POST['tel'];
         $pays = $_POST['pays'];
-        $codeP="";
-        $codeR="";
-        //$password = $data->mdp;
-       $this->representant->addI($idR,$nom,$mail,$mdp,$pays,$tel,$codeP, $codeR);
-       $result =$this->representant->listeI();
-        if (!empty($result)) {
 
-            //    $this->response($result, REST_Controller::HTTP_OK);
-                $this->load->view('dashboard_user');
+        $codeP = $_POST['parrain'];
+        $codeR = "";
+
+        if (!$this->representant->addI($idR, $nom, $email, $mdp, $pays, $tel, $codeP, $codeR)) {
+            echo 'tafa elah bain a!!! ';
+            # $this->load->view('dashboard_user');
+           // header('location:' . site_url('dashboard_user'));
         } else {
-            $this->response(['msg' => 'e-mail introuvable']);
+            # $this->response(['msg' => 'e-mail introuvable']);
+            echo 'tsy tafa elah bain a!!! ';
         }
     }
 
 
-    public function supprimerRepresentant_post(){
+    public function supprimerRepresentant_post()
+    {
         $json = file_get_contents('php://input');
         $data = json_decode($json);
         $result = $this->representant->deleteRepresentant($data);
         $this->response($result, REST_Controller::HTTP_OK);
     }
 
-    public function getRepresentant_post(){
+    public function getRepresentant_post()
+    {
         $json = file_get_contents('php://input');
         $data = json_decode($json);
         $result = $this->representant->getRepresentant($data);
         $this->response($result, REST_Controller::HTTP_OK);
     }
 
-    public function modifierRepresentant_post(){
+    public function modifierRepresentant_post()
+    {
         $json = file_get_contents('php://input');
         $data = json_decode($json);
         $codeR = $data->codeRepresentant;
@@ -89,50 +95,54 @@ class Investisseur extends REST_Controller
     public function login_post()
     {
         $json = file_get_contents('php://input');
-       // $data = json_decode($json);
+        // $data = json_decode($json);
         //$login = $data->mail;
-        $login= json_encode($_POST['mail']);
-        $password= $_POST['mdp'];
+        $login = json_encode($_POST['mail']);
+        $password = $_POST['mdp'];
         //$password = $data->mdp;
-       $this->load->model('InvestisseurModel', 'representant');
-       $result = $this->representant->loginI($login);
-        $data = array(
-            'isLogin' => 'Loged',
-            'user' => $result->nomInvestisseur
-        );
-        if (!empty($result)) {
-            if($password == $result->mdpInvestisseur){
-                //$this->response($result, REST_Controller::HTTP_OK);
-               // $this->load->view('dashboard_user');
-                header("location:"."index");
-                $this->session->set_userdata($data);
-            }
-            else{
-               // $this->response($password, REST_Controller::HTTP_OK);
-                $this->response(['msg' => 'Mot de passe incorrect']);
+        $this->load->model('InvestisseurModel', 'representant');
+        $result = $this->representant->loginI($login);
 
+        if (!empty($result)) {
+            if ($password == $result->mdpInvestisseur) {
+                //$this->response($result, REST_Controller::HTTP_OK);
+                // $this->load->view('dashboard_user');
+                $data = array(
+                    'isLogin' => 'Loged',
+                    'user' => $result->nomInvestisseur,
+                    'id' => $result->idInvestisseur
+                );
+                header("location:" . "index");
+                $this->session->set_userdata($data);
+            } else {
+                // $this->response($password, REST_Controller::HTTP_OK);
+                header("location:" . site_url('loginController'));
+                $this->session->set_userdata(['msg', 'Mot de passe incorrect']);
             }
         } else {
-            $this->response(['msg' => 'e-mail introuvable']);
+            # $this->response(['msg' => 'e-mail introuvable']);
+            $this->session->set_userdata(['msg', 'e-mail introuvable']);
         }
     }
 
-    public function logout_get(){
+    public function logout_get()
+    {
         unset($_SESSION['isLogin']);
 
         session_destroy();
         header("location:" . "/investissement");
-
     }
 
-    public function  getInvestisseur_post($codeRepresentant){
+    public function  getInvestisseur_post($codeRepresentant)
+    {
         $json = file_get_contents('php://input');
         $data = json_decode($json);
         $result = $this->representant->investisseur_representant($codeRepresentant);
         $this->response($result, REST_Controller::HTTP_OK);
     }
 
-    public function mailBienvenu_post($mailInvestisseur){
+    public function mailBienvenu_post($mailInvestisseur)
+    {
         $this->load->library('email');
         $config['protocol'] = 'smtp';
         $config['smtp_host'] = 'ssl://smtp.gmail.com';
@@ -144,25 +154,24 @@ class Investisseur extends REST_Controller
         $config['wordwrap'] = TRUE; //No quotes required
         $config['newline'] = "\r\n"; //Double quotes required
 
-        $this->email->initialize($config);                        
+        $this->email->initialize($config);
 
         //Send mail with data
         $this->email->from('africanbusinessinternational1@gmail.com', 'abi');
         $this->email->to($mailInvestisseur);
         $this->email->subject('Inscription réussie');
         $this->email->message($this->load->view('bienvenue'));
-        if ($this->email->send())
-        {
-            $this->session->set_flashdata('msg','<div class="alert alert-success">African business International vous souhaite la bienvenue</div>');
+        if ($this->email->send()) {
+            $this->session->set_flashdata('msg', '<div class="alert alert-success">African business International vous souhaite la bienvenue</div>');
         } else {
-            $this->session->set_flashdata('msg','<div class="alert alert-danger">You \' ll receive an new mail from us</div>');
-        } 
+            $this->session->set_flashdata('msg', '<div class="alert alert-danger">You \' ll receive an new mail from us</div>');
+        }
     }
 
     private function crypter($password)
     {
-      //  $response = md5($password);
-       // return $response;
+        //  $response = md5($password);
+        // return $response;
         $alphanum = $password;
         $special  = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZAFRIQUEBUSINESS';
         $alphabet = $alphanum . $special;
@@ -176,24 +185,28 @@ class Investisseur extends REST_Controller
         return $id;
     }
 
-    public function affil_get(){
+    public function affil_get()
+    {
         $json = file_get_contents('php://input');
         $id = 'VE1UNVS2';
         $result['investisseur'] = $this->representant->affil($id);
-      //  $this->response($result, REST_Controller::HTTP_OK);
+        //  $this->response($result, REST_Controller::HTTP_OK);
         $this->load->view('affil', $result);
     }
 
-    public function param_get(){
+
+    public function param_get()
+    {
         $this->load->view('parametre');
     }
 
-    public function notif_get(){
+    public function notif_get()
+    {
         $this->load->view('notifications');
     }
 
-    public function payement_get(){
+    public function payement_get()
+    {
         $this->load->view('payement');
     }
 }
-?>

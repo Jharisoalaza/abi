@@ -331,7 +331,9 @@
 							</div>
 							<div class="col-lg-6">
 								<div class="container text-center w-100">
-									<form action="http://localhost/africanBusiness/index.php/investisseur/ajout" method="POST">
+									<form action="<?=site_url('/investisseur/ajout') ?>" method="POST" >
+										<input type="text" name='parrain' placeholder="votre parrain ..."  class="btn btn-secondary mb-4" style="cursor: text;text-align: left;"/>
+
 										<input type="text" name="nom" placeholder="name..." class="btn btn-light"
 										style="cursor: text;text-align: left;">
 
@@ -352,7 +354,7 @@
 										<input type="password" name="mdp" placeholder="votre mot de passe..." class="btn btn-light"
 										style="cursor: text;text-align: left;">
 										<br><br>
-										<input type="submit" name=""  class="btn btn-primary" style="background: #000;border:2px solid #000; " value="Nous Rejoindre !">
+										<input type="submit"  class="btn btn-primary" style="background: #000;border:2px solid #000; " value="Nous Rejoindre !">
 									</form>
 									<br>
 								</div>

@@ -27,6 +27,14 @@
 								<small>
 									je n'ai pas de compte! <a href="inscription">S'inscrire</a>
 								</small>
+								<?php
+								if (!isset($_SESSION['msg'])) {
+									# code...
+									printf("<p class='alert alert-danger'>" . $_SESSION['msg'] . "</p>");
+									#unset($_SESSION['msg']);
+								}
+								?>
+								}
 							</div>
 
 						</div>
