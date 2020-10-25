@@ -27,8 +27,9 @@ class Investisseur extends REST_Controller
     public function index_get()
     {
         $json = file_get_contents('php://input');
-        $id = 'VE1UNVS2';
+        $id = $_SESSION['id'];
         $result['affil'] = $this->representant->totalAffilie($id);
+        $result['nbPack'] = $this->representant->nbPack($id)->nombre;
         // $this->response($res);
         $this->load->view('dashboard_user', $result);
     }
@@ -110,7 +111,8 @@ class Investisseur extends REST_Controller
                 $data = array(
                     'isLogin' => 'Loged',
                     'user' => $result->nomInvestisseur,
-                    'id' => $result->idInvestisseur
+                    'id' => $result->idInvestisseur,
+                    'pays' => $result->paysInvestisseur
                 );
                 header("location:" . "index");
                 $this->session->set_userdata($data);
@@ -188,7 +190,7 @@ class Investisseur extends REST_Controller
     public function affil_get()
     {
         $json = file_get_contents('php://input');
-        $id = 'VE1UNVS2';
+        $id = $_SESSION['id'];
         $result['investisseur'] = $this->representant->affil($id);
         //  $this->response($result, REST_Controller::HTTP_OK);
         $this->load->view('affil', $result);

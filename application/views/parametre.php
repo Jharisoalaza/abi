@@ -51,30 +51,19 @@
 		<div class="w-100">
 			<div class="container">
 				<div class="row">
-					<div class="col">
-						<div class="container r-p  p-3 text-center">
-
-							<button type="button" class="btn btn-block btn-success r-p transition-3d-hover">
+						<div class="card bg-success col p-4  m-4 text-center ">
+							<button type="button" class="btn btn-block btn-success  transition-3d-hover">
 								modifier ses informations
 							</button>
 						</div>
 						<br>
-						<div class="container r-p  p-3 text-center">
-							<a href="">
-								<button type="button" class="btn btn-block btn-secondary r-p transition-3d-hover">
-									se déconnecter
+						<div class="card bg-danger col  p-4 m-4 text-center">
+							<a href="<?php echo site_url('Investisseur/logout'); ?>">
+								<button type="button" class="btn btn-block btn-danger transition-3d-hover">
+									Se déconnecter
 								</button>
 							</a>
 						</div>
-						<br>
-						<div class="container r-p  text-white  p-3 text-center">
-							<a href='<?php echo site_url('Investisseur/logout'); ?>' class="btn btn-block btn-danger r-p transition-3d-hover">
-								supprimer son compte
-							</a>
-						</div>
-
-						
-					</div>
 				</div>
 			</div>
 		</div>

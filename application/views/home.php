@@ -112,7 +112,7 @@
 							<div class="card-title"  style="padding: 5%">
 								 <h4>ABI est sécurisé</h4>
 							</div>
-							<div class="w-100 r-p text-center" id="card1">
+							<div class="w-100 r-p text-center" id="card2">
 								<img src="<?php echo svg_url('lock');?>" width="100">
 							</div>
 							<div class="card-body">
@@ -125,7 +125,7 @@
 							<div class="card-title"  style="padding: 5%">
 								 <h4>ABI est fiable</h4>
 							</div>
-							<div class="w-100 r-p text-center" id="card1">
+							<div class="w-100 r-p text-center" id="card3">
 								<img src="<?php echo svg_url('handshake');?>" width="100">
 							</div>
 							<div class="card-body">

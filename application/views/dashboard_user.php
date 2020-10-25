@@ -60,7 +60,7 @@
 								<img src="<?php echo images_url('good.png'); ?>" width="17">
 							</h3>
 							<span class="text-muted">
-								<small>cameroun
+								<small><?= $_SESSION['pays'] ?>
 									<!-- pays de l'utilisateur --> </small>
 							</span>
 						</div>
@@ -85,7 +85,7 @@
 					<div class="row text-center">
 						<div class="col s3">
 							<h3>
-								1
+								<?= $nbPack ?>
 							</h3>
 							<span class="text-muted" style="font-size: 13px;">
 								<small>packs d'abonement</small>
@@ -200,7 +200,7 @@
 										<h3 style="text-transform: lowercase;">
 											Pack de
 											<?php
-							echo getPriceByKey($key);
+											echo getPriceByKey($key);
 
 											?>
 
@@ -208,7 +208,7 @@
 										<span>
 											ce pack vous permettra de gagner jusqu'a
 											<?php
-							echo getPriceByKey($key);
+											echo getPriceByKey($key);
 
 											?>
 											par mois
@@ -259,7 +259,7 @@
 										Pack 0$
 									</h3>
 									Acheter un pack et recevez la totalite à chaque mois. Obtenez egalement plein de bonus dans notre plateforme <br><br>
-									<a href="<?php echo site_url('paiement/payer'); ?>">
+									<a href="<?php echo site_url('welcome/index' . '#tarifs'); ?>">
 										<button type="button" class="btn btn-lg btn-block btn-primary btn btn-primary btn-wide transition-3d-hover">Acheter un pack</button>
 									</a>
 								</div>

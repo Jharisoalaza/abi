@@ -71,8 +71,11 @@ class InvestisseurModel extends CI_Model
     return $query->num_rows();
   }
 
-  public function commissionGaigner()
+  public function nbPack($id)
   {
+    $this->load->database();
+    $query = $this->db->query('SELECT count(*) as nombre from paiement1 where idInvestisseur = "' . $id . '"');
+    return $query->row();
   }
 
 

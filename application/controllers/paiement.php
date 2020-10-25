@@ -2,7 +2,6 @@
 defined('BASEPATH') or exit('No direct script access allowed');
 require_once APPPATH . 'third_party/REST_Controller.php';
 require_once APPPATH . 'third_party/Format.php';
-require_once 'Checker.php';
 
 use Restserver\Libraries\REST_Controller;
 
@@ -60,6 +59,7 @@ class Paiement extends REST_Controller
             $_SESSION['erreur'] =  'Achat réussit avec succes';
             $_SESSION['color'] = 'success';
             header('location:'. site_url('Paiement/payer/'. 'succes'));
+            $this->annuler($_GET['chiffre']);
             
         }else{
             $_SESSION['erreur'] = "Votre code de validation n'est pas valide";
@@ -81,7 +81,6 @@ class Paiement extends REST_Controller
     public function annuler($key)
     {
         $id = $key;
-        // [1]= id du produit
         if (isset($_SESSION["panier"][$id])) {
             $_SESSION["panier"][$id] -= 1;
         }

@@ -46,8 +46,7 @@
 								<img src="<?php echo images_url('good.png'); ?>" width="17"> - Affiliation
 							</h3>
 							<span class="text-muted">
-								<small>cameroun
-									<!-- pays de l'utilisateur --> </small>
+								<small><?=$_SESSION['pays'] ?> </small>
 							</span>
 						</div>
 						<div class="col-lg-3">
@@ -68,28 +67,41 @@
 		<section>
 			<div class="w-100 r-p bg-white">
 				<div class="container-fluid">
-					<div class="row text-center">
-						<form action="http://localhost/investissement/index.php/investisseur/affil" method="GET"></form>
-						<table class="table col-sm-11" style="margin-left: 5%; margin-right:2%">
-							<thead class="bg-light">
-								<td>Nom</td>
-								<td>Mail</td>
-								<td>Pays</td>
-								<td>Pack</td>
-							</thead>
-							<?php
-							foreach ($investisseur as $affil) {
-							?>
-								<tbody>
-									<td><?php echo $affil->nomInvestisseur; ?></td>
-									<td><?php echo $affil->mailInvestisseur; ?></td>
-									<td><?php echo $affil->paysInvestisseur; ?></td>
-									<td><?php echo $affil->codeRepresentant; ?></td>
-								</tbody>
-							<?php
-							}
-							?>
-						</table>
+					<div class="row text-center justify-content-around">
+						<?php
+						if (empty($investisseur)) {
+						?>
+							<div class="p border-warning border-left p-4">
+								<p class="lead">
+									Vous n'avez pas encore d'investisseur affilié!
+								</p>
+							</div>
+						<?php
+						} else {
+
+
+						?>
+							<table class="table col-sm-11" style="margin-left: 5%; margin-right:2%">
+								<thead class="bg-light">
+									<td>Nom</td>
+									<td>Mail</td>
+									<td>Pays</td>
+									<td>Pack</td>
+								</thead>
+								<?php
+								foreach ($investisseur as $affil) {
+								?>
+									<tbody>
+										<td><?php echo $affil->nomInvestisseur; ?></td>
+										<td><?php echo $affil->mailInvestisseur; ?></td>
+										<td><?php echo $affil->paysInvestisseur; ?></td>
+										<td><?php echo $affil->codeRepresentant; ?></td>
+									</tbody>
+								<?php
+								}
+								?>
+							</table>
+						<?php } ?>
 					</div>
 				</div>
 			</div>
